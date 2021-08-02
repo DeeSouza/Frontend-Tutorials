@@ -20,7 +20,11 @@ body {
 #app .header {
     height: 35%;
     width: 100%;
-    background-color: #2d5291;
+    background-image: 
+        linear-gradient(to bottom, rgba(45, 82, 145, 0.75), rgba(45, 82, 145, 0.75)), 
+        url('background.jpg');
+    background-size: cover;
+    background-position: center center;
     padding: 3.5rem 0 0 1rem;
 }
 
@@ -92,8 +96,8 @@ body {
 #app .forms .wrapper-forms .form-login .button-submit,
 #app .forms .wrapper-forms .form-login .button-submit-shadow { 
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background: #FFF;
     margin: auto;
@@ -101,7 +105,7 @@ body {
     right: 0;
     bottom: 0;
     transform: translateY(50%);
-    padding: 10px;
+    padding: 0.65rem;
 }
 
 #app .forms .wrapper-forms .form-login .button-submit-shadow {
@@ -169,7 +173,7 @@ body {
 #app .forms .wrapper-forms .form-login .form-group .form-remember-password {
     display: flex;
     justify-content: space-between;
-    font-size: 0.725rem;
+    font-size: 0.7rem;
     padding: 0 1rem;
 }
 
@@ -183,7 +187,8 @@ body {
     width: 15px;
 }
 
-#app .forms .wrapper-forms .form-login .form-group .form-remember-password .wrapper-remember-password strong {
+#app .forms .wrapper-forms .form-login .form-group .form-remember-password .wrapper-remember-password p {
+    margin: 0;
     margin-left: 0.385rem;
     color: #afb7be;
 }
@@ -204,7 +209,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 4rem 0;
+    padding: 4rem 0 1rem;
     flex-direction: column;
 }
 
@@ -215,6 +220,8 @@ body {
 
 #app .footer .social-buttons {
     margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
 }
 
 #app .footer .social-buttons button {
