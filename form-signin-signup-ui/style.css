@@ -18,9 +18,9 @@ body {
 }
 
 #app .header {
-    height: 50%;
+    height: 35%;
     width: 100%;
-    background-color: rgb(42, 42, 200);
+    background-color: #2d5291;
     padding: 3.5rem 0 0 1rem;
 }
 
@@ -51,13 +51,13 @@ body {
     background-color: #FFF;
     min-height: 200px;
     border-radius: 1rem;
-    box-shadow: 0px 5px 20px -5px rgb(134, 134, 134) ;
+    box-shadow: 0px 5px 20px -5px rgb(134, 134, 134);
 }
 
 #app .forms .wrapper-forms ul {
     list-style: none;
     font-size: 0;
-    padding: 18px 0px;
+    padding: 1.4rem 0 0;
 }
 
 #app .forms .wrapper-forms ul li {
@@ -68,12 +68,192 @@ body {
 }
 
 #app .forms .wrapper-forms ul li strong {
-    border-bottom: 0.20rem solid rgb(255, 148, 47);
+    color: #d5dbe2;
+    cursor: pointer;
     padding-bottom: 0.20rem;
+    transition: all 0.25s ease-in-out;
+    border-bottom: 0.20rem solid transparent;
+}
+
+#app .forms .wrapper-forms ul li:hover strong,
+#app .forms .wrapper-forms ul li.active strong {
+    color: #2f3169;
+    border-bottom: 0.20rem solid rgb(255, 148, 47);
+}
+
+#app .forms .wrapper-forms .form-login {
+    padding: 1.4rem 1rem 2rem;
+}
+
+#app .forms .wrapper-forms form {
+    position: relative;
+}
+
+#app .forms .wrapper-forms .form-login .button-submit,
+#app .forms .wrapper-forms .form-login .button-submit-shadow { 
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #FFF;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(50%);
+    padding: 10px;
+}
+
+#app .forms .wrapper-forms .form-login .button-submit-shadow {
+    box-shadow: 0px 5px 20px -5px rgb(134, 134, 134);
+    z-index: -1;
+    overflow: hidden;
+}
+
+#app .forms .wrapper-forms .form-login .button-submit button {
+    height: 100%;
+    width: 100%;
+    clip-path: circle();
+    border: none;
+    background-size: 100% 100%;
+    background-image: linear-gradient(to top left, #fc8898 20%, #ffb961 85%);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#app .forms .wrapper-forms .form-login .button-submit button:hover {
+    background-size: 300% 100%;
+    background-position: 100% 20%;
+}
+
+#app .forms .wrapper-forms .form-login .button-submit button i {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+#app .forms .wrapper-forms .form-login .form-group {
+    margin: 1rem 0rem;
+}
+
+#app .forms .wrapper-forms .form-login .form-group:first-child {
+   margin-top: 0px;
+}
+
+#app .forms .wrapper-forms .form-login .form-group .form-input {
+    border: 1px solid #dee0e4;
+    border-radius: 5rem;
+    height: 45px;
+    display: flex;
+}
+
+#app .forms .wrapper-forms .form-login .form-group .form-input strong {
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #afb7be;
+}
+
+#app .forms .wrapper-forms .form-login .form-group .form-input input {
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: none;
+    background: none;
+    color: #3d4046;
+}
+#app .forms .wrapper-forms .form-login .form-group .form-input input::placeholder{
+    color: #afb7be;
+}
+
+#app .forms .wrapper-forms .form-login .form-group .form-remember-password {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.725rem;
+    padding: 0 1rem;
+}
+
+#app .forms .wrapper-forms .form-login .form-group .form-remember-password .wrapper-remember-password {
+    display: flex;
+    align-items: center;
+}
+
+#app .forms .wrapper-forms .form-login .form-group .form-remember-password .wrapper-remember-password input {
+    height: 15px;
+    width: 15px;
+}
+
+#app .forms .wrapper-forms .form-login .form-group .form-remember-password .wrapper-remember-password strong {
+    margin-left: 0.385rem;
+    color: #afb7be;
+}
+
+#app .forms .wrapper-forms .form-login .form-group .form-remember-password a {
+    text-decoration: none;
+    color: #afb7be;
+}
+
+#app .forms .wrapper-forms .form-login .form-group .form-remember-password a:hover {
+    color: #000;
 }
 
 #app .footer {
-    height: 50%;
-    background-color: rgb(219, 219, 248);
+    flex: 1;
+    background-color: #ecf4fa;
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 4rem 0;
+    flex-direction: column;
+}
+
+#app .footer p {
+    color: #5c6169;
+    font-size: 0.825rem
+}
+
+#app .footer .social-buttons {
+    margin-top: 1.5rem;
+}
+
+#app .footer .social-buttons button {
+    width: 130px;
+    height: 40px;
+    border-radius: 2rem;
+    color: #FFF;
+    font-size: 0.85rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+#app .footer .social-buttons button:hover {
+    transition: all 0.5s ease-out;
+}
+
+#app .footer .social-buttons button i {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+#app .footer .social-buttons button.facebook {
+    border: 2px solid #627db4;
+    background-color: #3b599a;
+}
+
+#app .footer .social-buttons button.google {
+    border: 2px solid #eb6f5f;
+    background-color: #de4b38;
+}
+
+#app .footer .social-buttons button.facebook:hover {
+    border: 2px solid #3b599a;
+    color: #3b599a;
+    background-color: #FFF;
+}
+
+#app .footer .social-buttons button.google:hover {
+    border: 2px solid #de4b38;
+    color: #de4b38;
+    background-color: #FFF;
 }

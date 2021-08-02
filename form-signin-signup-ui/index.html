@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cache-control" content="no-cache" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>SignIn Form</title>
 </head>
@@ -21,15 +21,60 @@
         <div class="forms">
             <div class="wrapper-forms">
                 <ul>
-                    <li><strong>LOGIN</strong></li>
+                    <li class="active"><strong>LOGIN</strong></li>
                     <li><strong>SIGNUP</strong></li>
                 </ul>
 
-                <div class="form-login"></div>
+                <form>
+                    <div class="form-login">
+                        <div class="form-group">
+                            <label class="form-input" for="inputEmail">
+                                <strong><i class="fa fa-user"></i></strong>
+                                <input type="email" id="inputEmail" placeholder="Username">
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-input" for="inputPassword">
+                                <strong><i class="fa fa-lock"></i></strong>
+                                <input type="password" id="inputPassword" placeholder="************">
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-remember-password">
+                                <label class="wrapper-remember-password" for="inputRemember">
+                                    <input type="checkbox" id="inputRemember"> 
+                                    <strong>Remember me</strong>
+                                </label>
+                                <a href="javascript:;">Forgot Password?</a>
+                            </div>
+                        </div>
+
+                        <div class="button-submit-shadow"></div>
+                        <div class="button-submit">
+                            <button type="submit">
+                                <i class="fa fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
 
-        <div class="footer"></div>
+        <div class="footer">
+            <p>Or Signin with</p>
+            <div class="social-buttons">
+                <button class="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    Facebook
+                </button>
+                <button class="google">
+                    <i class="fab fa-google-plus-g"></i>
+                    Google
+                </button>
+            </div>
+        </div>
     </div>
 </body>
 </html>
