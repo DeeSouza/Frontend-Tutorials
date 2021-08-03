@@ -1,17 +1,46 @@
+:root {
+    --bgcolor-header-linear-from: rgba(45, 82, 145, 0.5);
+    --bgcolor-header-linear-to: rgba(45, 82, 145, 0.75);
+    --bgcolor-button-linear-from: #fc8898;
+    --bgcolor-button-linear-to: #ffb961;
+    --color-header-title: #FFFF00;
+    --color-header-subtitle: #FFF;
+    --color-shadow: #868686;
+    --color-border-bottom: #ff942f;
+    --color-link-forms: #2f3169;
+    --color-font-input: #3d4046;
+    --color-gray-700: #afb7be;
+    --color-gray-900: #5c6169;
+
+    --bgcolor-button-facebook: #3b599a;
+    --color-border-button-facebook: #627db4;
+    --bgcolor-button-google: #de4b38;
+    --color-border-button-google: #eb6f5f;
+    --bgcolor-social-button-hover: #FFF;
+
+    --bgcolor-footer: #ecf4fa;
+}
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
 }
 
+/* html, body {
+    height: 100%;
+} */
+
 body {
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
     font-size: 16px;
 }
 
 #app {
+    /* Aqui poderia ser 100% se todos os elementos parents de #app também fossem */
     height: 100vh;
-    width: 100%;
+
     display: flex;
     flex-direction: column;
     position: relative;
@@ -21,7 +50,7 @@ body {
     height: 35%;
     width: 100%;
     background-image: 
-        linear-gradient(to bottom, rgba(45, 82, 145, 0.75), rgba(45, 82, 145, 0.75)), 
+        linear-gradient(to bottom, var(--bgcolor-header-linear-from), var(--bgcolor-header-linear-to)), 
         url('background.jpg');
     background-size: cover;
     background-position: center center;
@@ -29,13 +58,13 @@ body {
 }
 
 #app .header h1 {
-    color: yellow;
+    color: var(--color-header-title);
     font-weight: 200;
     font-size: 1.5rem;
 }
 
 #app .header p {
-    color: #fff;
+    color: var(--color-header-subtitle);
     font-weight: 200;
 }
 
@@ -55,17 +84,16 @@ body {
     background-color: #FFF;
     min-height: 200px;
     border-radius: 1rem;
-    box-shadow: 0px 5px 20px -5px rgb(134, 134, 134);
+    box-shadow: 0px 5px 20px -5px var(--color-shadow);
 }
 
 #app .forms .wrapper-forms ul {
     list-style: none;
-    font-size: 0;
     padding: 1.4rem 0 0;
+    display: flex;
 }
 
 #app .forms .wrapper-forms ul li {
-    display: inline-block;
     width: 50%;
     font-size: 1rem;
     text-align: center;
@@ -81,8 +109,8 @@ body {
 
 #app .forms .wrapper-forms ul li:hover strong,
 #app .forms .wrapper-forms ul li.active strong {
-    color: #2f3169;
-    border-bottom: 0.20rem solid rgb(255, 148, 47);
+    color: var(--color-link-forms);
+    border-bottom: 0.20rem solid var(--color-border-bottom);
 }
 
 #app .forms .wrapper-forms .form-login {
@@ -97,16 +125,20 @@ body {
     height: 70px;
     border-radius: 50%;
     background: #FFF;
+    bottom: 0;
+    padding: 0.65rem;
+    
+    /* Centralizar elemento na horizontal */
     margin: auto;
     left: 0;
     right: 0;
-    bottom: 0;
+    
+    /* O elemento sobe metade (50% = 35px) do seu tamanho (70px) em altura (Y) */
     transform: translateY(50%);
-    padding: 0.65rem;
 }
 
 #app .forms .wrapper-forms .form-login .button-submit-shadow {
-    box-shadow: 0px 5px 20px -5px rgb(134, 134, 134);
+    box-shadow: 0px 5px 20px -5px var(--color-shadow);
     z-index: -1;
 }
 
@@ -114,16 +146,19 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0px 5px 20px -5px rgb(134, 134, 134);
+    box-shadow: 0px 5px 20px -5px var(--color-shadow);
 }
 
 #app .forms .wrapper-forms .form-login .button-submit button {
     height: 100%;
     width: 100%;
+    
+    /* Recorta o elemento deixando-o um círculo */
     clip-path: circle();
+
     border: none;
     background-size: 100% 100%;
-    background-image: linear-gradient(to top left, #fc8898 20%, #ffb961 85%);
+    background-image: linear-gradient(to top left, var(--bgcolor-button-linear-from) 20%, var(--bgcolor-button-linear-to) 85%);
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
@@ -143,7 +178,8 @@ body {
 }
 
 #app .forms .wrapper-forms .form-login .form-group:first-child {
-   margin-top: 0px;
+    /* Apenas o primeiro .form-group não tem margin top */
+    margin-top: 0px;
 }
 
 #app .forms .wrapper-forms .form-login .form-group .form-input {
@@ -158,19 +194,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #afb7be;
+    color: var(--color-gray-700);
 }
 
 #app .forms .wrapper-forms .form-login .form-group .form-input input {
-    width: 100%;
+    background: none;
+    border: none;
+    color: var(--color-font-input);
     height: 45px;
     outline: none;
-    border: none;
-    background: none;
-    color: #3d4046;
+    width: 100%;
 }
 #app .forms .wrapper-forms .form-login .form-group .form-input input::placeholder{
-    color: #afb7be;
+    color: var(--color-gray-700);
 }
 
 #app .forms .wrapper-forms .form-login .form-group .form-remember-password {
@@ -193,12 +229,12 @@ body {
 #app .forms .wrapper-forms .form-login .form-group .form-remember-password .wrapper-remember-password p {
     margin: 0;
     margin-left: 0.385rem;
-    color: #afb7be;
+    color: var(--color-gray-700);
 }
 
 #app .forms .wrapper-forms .form-login .form-group .form-remember-password a {
     text-decoration: none;
-    color: #afb7be;
+    color: var(--color-gray-700);
 }
 
 #app .forms .wrapper-forms .form-login .form-group .form-remember-password a:hover {
@@ -206,18 +242,18 @@ body {
 }
 
 #app .footer {
-    flex: 1;
-    background-color: #ecf4fa;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
     align-items: center;
-    padding: 4rem 0 1rem;
+    background-color: var(--bgcolor-footer);
+    display: flex;
     flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    padding: 4rem 0 1rem;
+    width: 100%;
 }
 
 #app .footer p {
-    color: #5c6169;
+    color: var(--color-gray-900);
     font-size: 0.825rem
 }
 
@@ -228,17 +264,13 @@ body {
 }
 
 #app .footer .social-buttons button {
-    width: 130px;
-    height: 40px;
     border-radius: 2rem;
     color: #FFF;
-    font-size: 0.85rem;
-    margin: 0 0.5rem;
     cursor: pointer;
-}
-
-#app .footer .social-buttons button:hover {
-    transition: all 0.5s ease-out;
+    font-size: 0.85rem;
+    height: 40px;
+    margin: 0 0.5rem;
+    width: 130px;
 }
 
 #app .footer .social-buttons button i {
@@ -247,23 +279,26 @@ body {
 }
 
 #app .footer .social-buttons button.facebook {
-    border: 2px solid #627db4;
-    background-color: #3b599a;
-}
-
-#app .footer .social-buttons button.google {
-    border: 2px solid #eb6f5f;
-    background-color: #de4b38;
+    border: 2px solid var(--color-border-button-facebook);
+    background-color: var(--bgcolor-button-facebook);
 }
 
 #app .footer .social-buttons button.facebook:hover {
-    border: 2px solid #3b599a;
-    color: #3b599a;
-    background-color: #FFF;
+    border: 2px solid var(--bgcolor-button-facebook);
+    color: var(--bgcolor-button-facebook);
+}
+
+#app .footer .social-buttons button.google {
+    border: 2px solid var(--color-border-button-google);
+    background-color: var(--bgcolor-button-google);
 }
 
 #app .footer .social-buttons button.google:hover {
-    border: 2px solid #de4b38;
-    color: #de4b38;
-    background-color: #FFF;
+    border: 2px solid var(--bgcolor-button-google);
+    color: var(--bgcolor-button-google);
+}
+
+#app .footer .social-buttons button:hover {
+    transition: all 0.5s ease-out;
+    background-color: var(--bgcolor-social-button-hover);
 }
