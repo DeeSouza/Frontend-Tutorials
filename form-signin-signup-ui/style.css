@@ -40,15 +40,15 @@ body {
 }
 
 #app .forms {
-    width: 100%;
-    position: absolute;
+    bottom: 0;
     left: 0;
+    margin: auto;
+    padding: 1rem;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    bottom: 0;
-    margin: auto;
+    width: 100%;
     z-index: 1;
-    padding: 1rem;
 }
 
 #app .forms .wrapper-forms {
@@ -87,9 +87,6 @@ body {
 
 #app .forms .wrapper-forms .form-login {
     padding: 1.4rem 1rem 2rem;
-}
-
-#app .forms .wrapper-forms form {
     position: relative;
 }
 
@@ -111,7 +108,13 @@ body {
 #app .forms .wrapper-forms .form-login .button-submit-shadow {
     box-shadow: 0px 5px 20px -5px rgb(134, 134, 134);
     z-index: -1;
-    overflow: hidden;
+}
+
+#app .forms .wrapper-forms .form-login .button-submit .wrapper-button {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 5px 20px -5px rgb(134, 134, 134);
 }
 
 #app .forms .wrapper-forms .form-login .button-submit button {
@@ -121,8 +124,8 @@ body {
     border: none;
     background-size: 100% 100%;
     background-image: linear-gradient(to top left, #fc8898 20%, #ffb961 85%);
-    transition: all 0.5s ease-in-out;
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }
 
 #app .forms .wrapper-forms .form-login .button-submit button:hover {
