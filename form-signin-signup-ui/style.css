@@ -3,22 +3,26 @@
     --bgcolor-header-linear-to: rgba(45, 82, 145, 0.75);
     --bgcolor-button-linear-from: #fc8898;
     --bgcolor-button-linear-to: #ffb961;
+    --bgcolor-button-facebook: #3b599a;
+    --bgcolor-button-google: #de4b38;
+    --bgcolor-social-button-hover: #FFF;
+    --bgcolor-footer: #ecf4fa;
+    
     --color-header-title: #FFFF00;
     --color-header-subtitle: #FFF;
     --color-shadow: #868686;
     --color-border-bottom: #ff942f;
+    --color-default-tab-forms: #d5dbe2;
     --color-link-forms: #2f3169;
     --color-font-input: #3d4046;
+    --color-border-input: #dee0e4;
+    --color-border-button-facebook: #627db4;
+    --color-border-button-google: #eb6f5f;
+    --color-font-default-button: #FFF;
+
     --color-gray-700: #afb7be;
     --color-gray-900: #5c6169;
-
-    --bgcolor-button-facebook: #3b599a;
-    --color-border-button-facebook: #627db4;
-    --bgcolor-button-google: #de4b38;
-    --color-border-button-google: #eb6f5f;
-    --bgcolor-social-button-hover: #FFF;
-
-    --bgcolor-footer: #ecf4fa;
+    --color-white: #FFF;
 }
 
 * {
@@ -46,6 +50,8 @@ body {
     position: relative;
 }
 
+/* Header */
+
 #app .header {
     height: 35%;
     width: 100%;
@@ -67,6 +73,10 @@ body {
     color: var(--color-header-subtitle);
     font-weight: 200;
 }
+
+/* Fim Header */
+
+/* Forms */
 
 #app .forms {
     bottom: 0;
@@ -100,7 +110,7 @@ body {
 }
 
 #app .forms .wrapper-forms ul li strong {
-    color: #d5dbe2;
+    color: var(--color-default-tab-forms);
     cursor: pointer;
     padding-bottom: 0.20rem;
     transition: all 0.25s ease-in-out;
@@ -183,7 +193,7 @@ body {
 }
 
 #app .forms .wrapper-forms .form-login .form-group .form-input {
-    border: 1px solid #dee0e4;
+    border: 1px solid var(--color-border-input);
     border-radius: 5rem;
     height: 45px;
     display: flex;
@@ -241,6 +251,10 @@ body {
     color: #000;
 }
 
+/* Fim Forms */
+
+/* Footer */
+
 #app .footer {
     align-items: center;
     background-color: var(--bgcolor-footer);
@@ -264,8 +278,8 @@ body {
 }
 
 #app .footer .social-buttons button {
+    color: var(--color-font-default-button);
     border-radius: 2rem;
-    color: #FFF;
     cursor: pointer;
     font-size: 0.85rem;
     height: 40px;
@@ -302,3 +316,5 @@ body {
     transition: all 0.5s ease-out;
     background-color: var(--bgcolor-social-button-hover);
 }
+
+/* Fim Footer */
