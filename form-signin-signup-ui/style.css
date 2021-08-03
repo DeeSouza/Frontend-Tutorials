@@ -222,7 +222,7 @@ body {
 #app .forms .wrapper-forms .form-login .form-group .form-remember-password {
     display: flex;
     justify-content: space-between;
-    font-size: 0.7rem;
+    font-size: 0.785rem;
     padding: 0 1rem;
 }
 
@@ -281,10 +281,11 @@ body {
     color: var(--color-font-default-button);
     border-radius: 2rem;
     cursor: pointer;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     height: 40px;
     margin: 0 0.5rem;
     width: 130px;
+    font-family: 'Lato', sans-serif;
 }
 
 #app .footer .social-buttons button i {
