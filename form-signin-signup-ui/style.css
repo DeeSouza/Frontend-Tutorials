@@ -92,7 +92,6 @@ body {
 }
 
 #app .forms .wrapper-form {
-    background-color: #FFF;
     min-height: 200px;
     width: 100%;
     margin-top: -8rem;
@@ -104,7 +103,10 @@ body {
 #app .forms .wrapper-form ul {
     list-style: none;
     padding: 1.4rem 0 0;
+    background-color: #FFF;
     display: flex;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 #app .forms .wrapper-form ul li {
@@ -131,7 +133,8 @@ body {
     padding: 1.4rem 1rem 2rem;
     position: relative;
     background-color: #FFF;
-    border-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     z-index: 1;
 }
 
