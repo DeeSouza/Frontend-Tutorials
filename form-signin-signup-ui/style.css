@@ -79,20 +79,23 @@ body {
 /* Forms */
 
 #app .forms {
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    padding: 1rem;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
     width: 100%;
-    z-index: 1;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #app .forms .wrapper-forms {
     background-color: #FFF;
     min-height: 200px;
+    width: 100%;
+    margin-top: -8rem;
     border-radius: 1rem;
     box-shadow: 0px 5px 20px -5px var(--color-shadow);
 }
