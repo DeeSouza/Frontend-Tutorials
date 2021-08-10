@@ -107,6 +107,8 @@ body {
     display: flex;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    position: relative;
+    z-index: 2;
 }
 
 #app .forms .wrapper-form ul li {
