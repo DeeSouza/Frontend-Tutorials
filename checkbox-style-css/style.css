@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+label input[type="checkbox"] {
+    display: none;
+}
+
+label span {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 80px;
+    border-radius: 100px;
+    background-color: rgb(235, 90, 90);
+}
+
+label span i {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #FFF;
+    margin-left: 5px;
+    transition: all 0.25s ease-in-out;
+    transform: translateX(0px);
+}
+
+/* ~ significa próximo ou irmão. span é irmão de input */
+
+label input[type="checkbox"]:checked ~ span {
+    background-color: rgb(104, 231, 104);
+}
+
+label input[type="checkbox"]:checked ~ span i {
+   transform: translateX(100px); 
+}
+
+label span i::before, label span i::after {
+    content: "";
+    width: 5px;
+    height: 50%;
+    background-color: rgb(42, 39, 39);
+    position: absolute;
+    transition: all 0.25s ease-in-out;
+    /* 
+        É o mesmo que:
+        left: 0; right: 0; top: 0; bottom: 0;
+
+        ;)
+    */
+    inset: 0 0 0 0;
+    margin: auto;
+}
+
+label span i::before {
+    transform: rotateZ(45deg) translate3d(0, 0, 0);
+}
+
+label span i::after {
+    transform: rotateZ(-45deg) translate3d(0, 0, 0);
+}
+
+label input[type="checkbox"]:checked ~ span i::before {
+    transform: rotateZ(45deg) translate3d(5px, -5px, 0);
+}
+
+label input[type="checkbox"]:checked ~ span i::after {
+    transform: rotateZ(-45deg) translate3d(-14px, -3px, 0);
+    height: 30%;
+}
