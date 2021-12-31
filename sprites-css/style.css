@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(73, 217, 228);
+}
+
+#sprite {
+  width: 400px;
+  /* Altura do elemento é o tamanho da imagem em altura dividido pelo número de frames */
+  height: calc(2400px / 12);
+  background: url(cats.png);
+  /* Inicia a posição da imagem no 0, no eixo X e Y (Horizontal e Vertical) */
+  background-position: 0 0;
+
+  /* Animação */
+  
+  /* animation-name: catWalking;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(12);
+  animation-duration: 0.95s; */
+
+  /* Tudo isso acima pode ser substituído pela propriedade abaixo */
+
+  animation: catWalking 0.95s steps(12) infinite;
+}
+
+@keyframes catWalking {
+  /* A animação é feita apenas no eixo Y - Vertical, por causa 
+  da disposição dos frames da imagem  */
+
+  0%{ 
+    background-position-y: 0;
+  }
+
+  100%{ 
+    /* A animação está ao contrário, por isso o número deve ser negativo! */
+    background-position-y: -2400px; /* Tamanho total da altura da imagem */
+  }
+  
+}
